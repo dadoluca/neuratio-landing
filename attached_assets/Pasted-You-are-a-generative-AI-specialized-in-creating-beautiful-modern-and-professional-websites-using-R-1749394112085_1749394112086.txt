@@ -1,0 +1,131 @@
+You are a generative AI specialized in creating beautiful, modern, and professional websites using React and module.css files (my favorite option) or TailwindCSS (or any CSS framework you prefer). I want you to create a landing page website for my startup, Neuratio, which provides an AI-powered customer service platform for machinery manufacturers. The website should be minimal, elegant, and convey a sense of professionalism and innovation, similar to these examples:
+
+https://plino.ai
+
+https://indigo.ai
+
+https://www.algoreducation.com
+
+Here’s what I need:
+
+General Style & Feel:
+
+✅ The website must have a modern, sleek, and clean design with generous whitespace.
+✅ Use a minimal, “less is more” approach: no clutter, just essential and impactful content.
+✅ Use an aqua green as the primary color (#1cd5be or similar) for key elements (CTA buttons, links, highlights).
+✅ Create a global.css (or tailwind.config.js if using Tailwind) file that centralizes the color scheme and any global styles, so it’s easy to customize the look later.
+✅ Fonts should be modern and readable (like Inter, Helvetica, or similar).
+✅ The website should be fully responsive (mobile-friendly).
+✅ Optimize for SEO with appropriate meta tags, semantic HTML, and a sitemap.
+
+Core Structure (Pages):
+
+1️⃣ Homepage
+
+Hero section with a powerful, bold tagline that instantly captures attention.
+
+Text: “Revolutionizing Customer Service for Machinery Manufacturers.”
+
+Subtext: “Say goodbye to endless email chains, repetitive requests, and costly support hours. Neuratio helps you resolve customer issues faster, smarter, and more efficiently than ever before.”
+
+Eye-catching “Book a Demo” CTA button above the fold.
+
+Visuals or illustrations (optional: AI-generated or placeholder) that evoke innovation and professionalism in the industrial tech space.
+
+Scrolling down: Brief explanation of the core problems manufacturers face (highlight pain points) and how Neuratio addresses them.
+
+Showcase of key benefits for manufacturers (bulleted list or icon-based):
+
+📈 Reduced average resolution time
+
+🔄 Automated responses for repetitive issues
+
+⏰ Minimized back-and-forth emails
+
+🌍 24/7 multilingual support
+
+🧠 AI-powered knowledge base
+
+Another “Book a Demo” CTA to encourage conversion.
+
+2️⃣ About Us / Our Story
+
+Headline: “Meet the Founders”
+
+Two short profile sections for the co-founders:
+
+Luca Dadone from Fossano (CN), Italy
+
+LinkedIn: https://www.linkedin.com/in/luca-dadone-8858a41a9/
+
+Andrea Bioddo from Fossano (CN), Italy
+
+LinkedIn: https://www.linkedin.com/in/andrea-bioddo/
+
+A short narrative describing how they saw the pains of machinery manufacturers in managing post-sale service and decided to build Neuratio to solve it.
+
+Emphasize professionalism, empathy, and dedication to revolutionizing post-sale support for industrial manufacturers.
+
+3️⃣ Book a Demo / Contact Us
+
+Simple, clean contact form:
+
+Name
+
+Company
+
+Email
+
+Message
+
+Clear messaging: “Interested in seeing Neuratio in action? Let’s connect!”
+
+Social media / LinkedIn links.
+
+Optionally, embed Calendly or similar for easy demo booking.
+
+Technical Features:
+
+🔧 Implement the site using React (with functional components and hooks).
+🔧 Modular structure: separate components for the hero, features, about us, and contact form.
+🔧 Centralized styling in global.css (or Tailwind’s config).
+🔧 Add basic SEO best practices (title, description, keywords) to help rank high on Google.
+🔧 Use accessible HTML (proper heading hierarchy, alt tags for images, ARIA roles if needed).
+🔧 Make sure the site loads fast and smoothly with good performance metrics.
+
+Optional Visuals:
+
+If you need placeholder images for the site (like hero illustrations or icons), use neutral and professional images of machinery, people in an industrial setting, or modern AI/tech imagery.
+
+If you want to integrate screenshots or visuals of the Neuratio platform (if they exist), let me know! If not, we can use high-quality, relevant stock images as placeholders.
+
+Key Messaging (based on our business plan):
+
+Neuratio is an AI-powered platform for managing customer service in the machinery manufacturing sector. We address these core pain points:
+
+Repetitive requests handled manually
+
+Incomplete or disorganized emails that slow down resolution
+
+Customers ignoring manuals and asking the same questions
+
+Loss of time and high operational costs
+
+Lack of knowledge centralization
+
+Bottlenecks on expert technicians
+
+Challenges due to time zones and absence of dedicated staff
+
+Benefits for our clients:
+✅ Drastically reduced response times
+✅ Centralized knowledge for future cases
+✅ More productive teams with fewer repetitive tasks
+✅ Consistent, multilingual, 24/7 support
+✅ Ability to prioritize requests from clients with machines under warranty
+
+The end result? Happier customers, more efficient operations, and a competitive edge for machinery manufacturers.
+
+Let me know if you need screenshots of the platform or additional images, as these can be added to the site’s visuals to reinforce our product’s real-world value.
+
+The final website should feel like a breath of fresh air for any industrial manufacturer who visits it — conveying both the urgency of their pain and the relief Neuratio provides.

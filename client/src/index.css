@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(173, 82%, 47%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(201, 95%, 48%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(173, 82%, 47%);
+  --radius: 0.75rem;
+  --neuratio-primary: #1cd5be;
+  --neuratio-primary-dark: #16af9d;
+  --neuratio-primary-light: hsla(173, 82%, 64%, 0.282);
+  --neuratio-secondary: #05a9f0;
+  --neuratio-secondary-dark: #028cc7;
+  --neuratio-secondary-light: #60cfff;
+  --neuratio-primary-transparent: #1cd5bf1f;
+  --neuratio-primary-dark-transparent: #16af9d25;
+  --neuratio-secondary-transparent: rgba(5, 169, 240, 0.11);
+  --neuratio-secondary-lighter: #05a9f032;
+  --neuratio-light-bg: hsl(0, 0%, 98%);
+  --neuratio-light-surface: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --background: hsl(224, 71.4%, 4.1%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(215, 27.9%, 16.9%);
+  --muted-foreground: hsl(217.9, 10.6%, 64.9%);
+  --popover: hsl(224, 71.4%, 4.1%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(224, 71.4%, 4.1%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(215, 27.9%, 16.9%);
+  --input: hsl(215, 27.9%, 16.9%);
+  --primary: hsl(168, 76%, 46%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(215, 27.9%, 16.9%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --accent: hsl(215, 27.9%, 16.9%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(168, 76%, 46%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--neuratio-primary) 0%, var(--neuratio-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--neuratio-light-bg) 0%, var(--neuratio-light-surface) 50%, var(--neuratio-light-bg) 100%);
+    position: relative;
+  }
+
+  .gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, var(--neuratio-secondary-transparent) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, var(--neuratio-primary-transparent) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, var(--neuratio-secondary-lighter) 0%, transparent 50%);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      hsl(0, 0%, 100%) 0%, 
+      hsl(0, 0%, 98%) 25%,
+      hsl(210, 40%, 98%) 50%,
+      hsl(0, 0%, 97%) 75%,
+      hsl(0, 0%, 100%) 100%);
+    position: relative;
+  }
+
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 30% 20%, var(--neuratio-primary-transparent) 0%, transparent 60%),
+      radial-gradient(ellipse at 70% 80%, var(--neuratio-secondary-transparent) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 40%, var(--neuratio-primary-light) 0%, transparent 50%);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, var(--neuratio-light-surface) 0%, hsl(0, 0%, 99%) 100%);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .glow-button {
+    background: linear-gradient(135deg, var(--neuratio-primary) 0%, var(--neuratio-secondary) 100%);
+    box-shadow: 0 4px 14px 0 rgba(28, 213, 190, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 6px 20px 0 rgba(28, 213, 190, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out;
+  }
+
+  .animate-float {
+    animation: subtle-float 8s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+
+  .ai-grid {
+    background-image: 
+      linear-gradient(rgba(29, 213, 190, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(29, 213, 190, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px;
+    animation: subtle-grid-move 40s linear infinite;
+  }
+
+  .professional-glow {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .professional-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      transparent,
+      rgba(28, 213, 190, 0.1),
+      transparent,
+      rgba(28, 213, 190, 0.05),
+      transparent
+    );
+    animation: rotate-glow 30s linear infinite;
+    pointer-events: none;
+  }
+
+  .professional-glow::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--background);
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .professional-glow > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .animate-parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .animate-title-wave {
+    animation: title-wave 3s ease-in-out infinite;
+  }
+
+  .animate-text-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--foreground) 0%,
+      var(--primary) 20%,
+      var(--foreground) 40%,
+      var(--foreground) 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shimmer 4s ease-in-out infinite;
+  }
+
+  .animate-breath {
+    animation: breath 6s ease-in-out infinite;
+  }
+
+  .animate-gentle-float {
+    animation: gentle-float 8s ease-in-out infinite;
+  }
+
+  .professional-border {
+    position: relative;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, var(--primary), transparent, var(--primary)) border-box;
+    border: 2px solid transparent;
+    animation: border-flow 8s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+@keyframes subtle-grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(100px, 100px); }
+}
+
+@keyframes rotate-glow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(28, 213, 190, 0.2);
+    opacity: 0.8;
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(28, 213, 190, 0.4);
+    opacity: 1;
+  }
+}
+
+@keyframes title-wave {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes text-shimmer {
+  0% { 
+    background-position: -200% center;
+  }
+  100% { 
+    background-position: 200% center;
+  }
+}
+
+@keyframes breath {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes gentle-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% { 
+    transform: translateY(5px) rotate(-0.5deg);
+  }
+}
+
+@keyframes border-flow {
+  0% { 
+    background-position: 0% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+  100% { 
+    background-position: 0% 50%;
+  }
+}
