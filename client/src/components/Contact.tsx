@@ -217,7 +217,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-all duration-300 transform hover:scale-110"
-              >
+              >Luca
                 <ExternalLink className="h-8 w-8" />
               </a>
               <a
@@ -225,7 +225,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary/80 transition-all duration-300 transform hover:scale-110"
-              >
+              >Andrea
                 <ExternalLink className="h-8 w-8" />
               </a>
             </div>

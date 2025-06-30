@@ -52,7 +52,7 @@ export default function About() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary/10 rounded-full"></div>
               </div>
-              <h3 className="text-3xl font-bold text-foreground mb-3 animate-text-shimmer">{founder.name}</h3>
+              <h3 className="text-3xl font-bold text-foreground mb-3">{founder.name}</h3>
               <p className="text-primary font-semibold text-lg mb-2">{founder.role}</p>
               <p className="text-muted-foreground mb-8 text-lg">{founder.location}</p>
               <a

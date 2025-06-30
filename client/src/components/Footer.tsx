@@ -81,7 +81,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
-              >
+              >Luca
                 <ExternalLink className="h-8 w-8" />
               </a>
               <a
@@ -89,10 +89,16 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
-              >
-                <ExternalLink className="h-8 w-8" />
-              </a>
+              >Andrea<ExternalLink className="h-8 w-8" />
+              </a>              
             </div>
+            <br />
+            <a
+                href="mailto:info@neuratio.ai"
+                className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
+              >
+                info@neuratio.ai
+              </a>
           </div>
         </div>
         

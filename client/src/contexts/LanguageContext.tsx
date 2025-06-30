@@ -20,7 +20,7 @@ const translations = {
     // Hero Section
     'hero.title': 'Revolutionizing Customer Service for',
     'hero.titleHighlight': 'Machinery Manufacturers',
-    'hero.subtitle': 'Say goodbye to endless email chains, repetitive requests, and costly support hours. Neuratio helps you resolve customer issues faster, smarter, and more efficiently than ever before.',
+    'hero.subtitle': 'Resolve requests in seconds with an AI assistant that knows every detail about your machinery.',
     'hero.bookDemo': 'Book a Demo!',
     'hero.learnMore': 'Learn More',
     'hero.flowTitle': 'How Neuratio Works',
@@ -61,7 +61,7 @@ const translations = {
     
     // About Section
     'about.title': 'Meet the Founders',
-    'about.subtitle': 'Two visionary entrepreneurs from Fossano, Italy, who witnessed firsthand the challenges machinery manufacturers face in post-sale support',
+    'about.subtitle': 'Born in Fossano (Italy), we listened to the real needs of machinery manufacturers and set to work to make their customer service easier.',
     'about.cofounder': 'Co-founder',
     'about.linkedin': 'Connect on LinkedIn',
     'about.storyTitle': 'Our Story',
@@ -71,7 +71,7 @@ const translations = {
     
     // Contact Section
     'contact.title': 'Interested in Seeing Neuratio in Action?',
-    'contact.subtitle': 'Let\'s connect! Book a personalized demo and discover how Neuratio can transform your customer service operations.',
+    'contact.subtitle': 'Let\'s connect! Book a personalized demo to see how Neuratio can simplify your customer service. We’ll reach out for a short 30-minute demo with no obligation.',
     'contact.name': 'Name',
     'contact.company': 'Company',
     'contact.email': 'Email',
@@ -142,16 +142,16 @@ const translations = {
 
     // Feature Details
     'features.routing.title': 'Intelligent Request Routing',
-    'features.routing.subtitle': 'for incomplete or complex requests',
+    'features.routing.subtitle': 'for any request',
     'features.routing.description': 'Neuratio automatically analyzes incoming requests and routes them to the appropriate specialist or automated system, ensuring efficient handling of every customer inquiry.',
 
-    'features.simpleRequests.title': 'Simple Request Management',
-    'features.simpleRequests.subtitle': 'automatic responses for common issues',
-    'features.simpleRequests.description': 'The AI system identifies and automatically responds to routine requests, providing instant solutions from your knowledge base and reducing response times dramatically.',
+    'features.simpleRequests.title': 'Management of Simple or Incomplete Requests',
+    'features.simpleRequests.subtitle': 'automatic responses for common problems and incomplete requests',
+    'features.simpleRequests.description': 'The AI system automatically identifies and responds to routine requests and incomplete requests, such as when the machine serial number or problem description is missing, providing immediate answers and lightening the workload for your team.',
 
     'features.suggestions.title': 'Generative Answer Suggestions',
     'features.suggestions.subtitle': 'for complete requests',
-    'features.suggestions.description': 'Advanced AI generates contextual suggestions and complete responses by analyzing your documentation, past tickets, and best practices to provide accurate solutions.',
+    'features.suggestions.description': 'The AI ​​analyzes the machine\'s technical manuals and similar tickets already resolved in the past, generating draft solutions, ready to be sent with a click.',
 
     'features.knowledgeBase.title': 'Intelligent Knowledge Storage',
     'features.knowledgeBase.description': 'Centralized storage of problems and solutions in intelligent memory that learns and improves over time, making institutional knowledge accessible instantly.',
@@ -209,7 +209,7 @@ const translations = {
     // Hero Section
     'hero.title': 'Rivoluzioniamo il Servizio Clienti per i',
     'hero.titleHighlight': 'Produttori di Macchinari',
-    'hero.subtitle': 'Dì addio alle infinite catene di email, alle richieste ripetitive e alle costose ore di supporto. Neuratio ti aiuta a risolvere i problemi dei clienti più velocemente, in modo più intelligente ed efficiente che mai.',
+    'hero.subtitle': 'Risolvi le richieste in pochi secondi grazie a un assistente AI che conosce ogni dettaglio dei tuoi macchinari.',
     'hero.bookDemo': 'Prenota una demo!',
     'hero.learnMore': 'Scopri di Più',
     'hero.flowTitle': 'Come Funziona Neuratio',
@@ -250,7 +250,7 @@ const translations = {
     
     // About Section
     'about.title': 'Incontra i Fondatori',
-    'about.subtitle': 'Due imprenditori visionari di Fossano, Italia, che hanno assistito in prima persona alle sfide che i produttori di macchinari affrontano nel supporto post-vendita',
+    'about.subtitle': 'Nati a Fossano (Italia), abbiamo ascoltato i bisogni reali dei produttori di macchinari e ci siamo messi al lavoro per rendere più semplice il loro servizio clienti.',
     'about.cofounder': 'Co-fondatore',
     'about.linkedin': 'Connettiti su LinkedIn',
     'about.storyTitle': 'La Nostra Storia',
@@ -260,7 +260,7 @@ const translations = {
     
     // Contact Section
     'contact.title': 'Interessato a Vedere Neuratio in Azione?',
-    'contact.subtitle': 'Mettiamoci in contatto! Prenota una demo personalizzata e scopri come Neuratio può trasformare le tue operazioni di servizio clienti.',
+    'contact.subtitle': 'Mettiamoci in contatto! Prenota una demo personalizzata per scoprire come Neuratio può semplificare il tuo servizio clienti. Ti contatteremo per una breve demo di 30 minuti senza alcun impegno.',
     'contact.name': 'Nome',
     'contact.company': 'Azienda',
     'contact.email': 'Email',
@@ -331,16 +331,16 @@ const translations = {
 
     // Feature Details
     'features.routing.title': 'Smistamento Richieste Intelligente',
-    'features.routing.subtitle': 'per richieste incomplete o complesse',
+    'features.routing.subtitle': 'per qualsiaisi richiesta',
     'features.routing.description': 'Neuratio analizza automaticamente le richieste in arrivo e le indirizza allo specialista appropriato o al sistema automatico, garantendo una gestione efficiente di ogni richiesta del cliente.',
 
-    'features.simpleRequests.title': 'Gestione Richieste Semplici',
-    'features.simpleRequests.subtitle': 'risposte automatiche per problemi comuni',
-    'features.simpleRequests.description': 'Il sistema AI identifica e risponde automaticamente alle richieste di routine, fornendo soluzioni istantanee dalla tua base di conoscenza e riducendo drasticamente i tempi di risposta.',
+    'features.simpleRequests.title': 'Gestione Richieste Semplici o Incomplete',
+    'features.simpleRequests.subtitle': 'risposte automatiche per problemi comuni e richieste incomplete',
+    'features.simpleRequests.description': 'Il sistema AI identifica e risponde automaticamente alle richieste di routine e alle richieste incomplete, ad esempio quando manca la matricola del macchinario o la descrizione del problema, fornendo risposte immediate e alleggerendo il lavoro del tuo team.',
 
     'features.suggestions.title': 'Answer Suggestion Generativa',
     'features.suggestions.subtitle': 'per richieste complete',
-    'features.suggestions.description': 'L\'AI avanzata genera suggerimenti contestuali e risposte complete analizzando la tua documentazione, i ticket passati e le best practice per fornire soluzioni accurate.',
+    'features.suggestions.description': 'L\'AI analizza i manuali tecnici della macchina e i ticket simili già risolti in passato, generando bozze di soluzioni, pronte da inviare con un click.',
 
     'features.knowledgeBase.title': 'Storicizzazione Intelligente',
     'features.knowledgeBase.description': 'Archiviazione centralizzata di problemi e soluzioni nella memoria intelligente che impara e migliora nel tempo, rendendo la conoscenza istituzionale accessibile istantaneamente.',
