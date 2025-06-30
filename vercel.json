@@ -1,20 +1,19 @@
 {
   "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs18.x"
+    "dist/index.js": {
+      "runtime": "edge"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/server/index.ts"
+      "destination": "/dist/index.js"
     },
     {
       "source": "/(.*)",
-      "destination": "/client/index.html"
+      "destination": "/dist/public/$1"
     }
   ],
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/public",
-  "installCommand": "npm install"
+  "outputDirectory": "dist/public"
 }
