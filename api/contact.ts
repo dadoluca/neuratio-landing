@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { sendContactEmail, sendAutoReply } from './email';
-import { storage } from './storage';
-import { insertContactRequestSchema } from './schema';
+import { sendContactEmail, sendAutoReply } from './email.js';
+import { storage } from './storage.js';
+import { insertContactRequestSchema } from './schema.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
