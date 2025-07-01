@@ -150,20 +150,20 @@ const translations = {
     'features.simpleRequests.description': 'The AI system automatically identifies and responds to routine requests and incomplete requests, such as when the machine serial number or problem description is missing, providing immediate answers and lightening the workload for your team.',
 
     'features.suggestions.title': 'Generative Answer Suggestions',
-    'features.suggestions.subtitle': 'for complete requests',
+    'features.suggestions.subtitle': 'for complex requests',
     'features.suggestions.description': 'The AI ​​analyzes the machine\'s technical manuals and similar tickets already resolved in the past, generating draft solutions, ready to be sent with a click.',
 
     'features.knowledgeBase.title': 'Intelligent Knowledge Storage',
-    'features.knowledgeBase.description': 'Centralized storage of problems and solutions in intelligent memory that learns and improves over time, making institutional knowledge accessible instantly.',
+    'features.knowledgeBase.description': 'CAn intelligent memory that stores problems and solutions, learning from each request and transferring the experience of technicians to a centralized knowledge base that supports AI. An intelligent memory that stores problems and solutions, improving request after request and transferring the experience of technicians to a centralized knowledge base that supports AI.',
 
     'features.ticketPriority.title': 'Ticket Prioritization',
     'features.ticketPriority.description': 'Automatic priority assignment based on urgency, customer type, warranty status, and business impact to ensure critical issues receive immediate attention.',
 
     'features.customerIdentification.title': 'Customer Identification',
-    'features.customerIdentification.description': 'Smart customer recognition system that identifies users and their purchase history, warranty status, and previous interactions for personalized support.',
+    'features.customerIdentification.description': 'Intelligent system that recognizes customers and machines based on company criteria, providing information on warranties and previous interactions for increasingly personalized support.',
 
     'features.autoTranslation.title': 'Automatic Translation',
-    'features.autoTranslation.description': 'Real-time translation capabilities that enable seamless communication with customers worldwide, breaking down language barriers in technical support.',
+    'features.autoTranslation.description': 'Real-time translation to ensure smooth communication with customers around the world, overcoming any language barriers in technical support.',
   
     // Privacy Policy
     'privacyPolicy.title': 'Privacy Policy',
@@ -338,23 +338,23 @@ const translations = {
     'features.simpleRequests.subtitle': 'risposte automatiche per problemi comuni e richieste incomplete',
     'features.simpleRequests.description': 'Il sistema AI identifica e risponde automaticamente alle richieste di routine e alle richieste incomplete, ad esempio quando manca la matricola del macchinario o la descrizione del problema, fornendo risposte immediate e alleggerendo il lavoro del tuo team.',
 
-    'features.suggestions.title': 'Answer Suggestion Generativa',
-    'features.suggestions.subtitle': 'per richieste complete',
+    'features.suggestions.title': 'Risposte suggerite dall’AI',
+    'features.suggestions.subtitle': 'per richieste complesse',
     'features.suggestions.description': 'L\'AI analizza i manuali tecnici della macchina e i ticket simili già risolti in passato, generando bozze di soluzioni, pronte da inviare con un click.',
 
     'features.knowledgeBase.title': 'Storicizzazione Intelligente',
-    'features.knowledgeBase.description': 'Archiviazione centralizzata di problemi e soluzioni nella memoria intelligente che impara e migliora nel tempo, rendendo la conoscenza istituzionale accessibile istantaneamente.',
+    'features.knowledgeBase.description': 'Una memoria intelligente che archivia problemi e soluzioni, migliorando richiesta dopo richiesta e trasferendo l’esperienza dei tecnici in una knowledge base centralizzata e a supporto dell’AI.',
 
     'features.ticketPriority.title': 'Prioritizzazione dei Ticket',
     'features.ticketPriority.description': 'Assegnazione automatica delle priorità basata su urgenza, tipo di cliente, stato della garanzia e impatto aziendale per garantire che i problemi critici ricevano attenzione immediata.',
 
     'features.customerIdentification.title': 'Identificazione Cliente',
-    'features.customerIdentification.description': 'Sistema intelligente di riconoscimento clienti che identifica gli utenti e la loro cronologia degli acquisti, stato della garanzia e interazioni precedenti per un supporto personalizzato.',
+    'features.customerIdentification.description': 'Sistema intelligente che riconosce clienti e macchinari in base a criteri aziendali, offrendo informazioni su garanzia e interazioni precedenti per un supporto sempre più personalizzato.',
 
     'features.autoTranslation.title': 'Traduzione Automatica',
-    'features.autoTranslation.description': 'Capacità di traduzione in tempo reale che abilitano comunicazione fluida con clienti in tutto il mondo, abbattendo le barriere linguistiche nel supporto tecnico.',
+    'features.autoTranslation.description': 'Traduzione in tempo reale per garantire una comunicazione fluida con clienti in tutto il mondo, superando ogni barriera linguistica nel supporto tecnico.',
   
-        // Privacy Policy
+    // Privacy Policy
     'privacyPolicy.title': 'Informativa sulla Privacy',
     'privacyPolicy.subtitle': 'Come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali',
     'privacyPolicy.lastUpdated': 'Ultimo aggiornamento',
