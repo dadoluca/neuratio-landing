@@ -8,6 +8,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  console.log(!!process.env.SENDGRID_API_KEY, 'SendGrid API Key is set:', process.env.SENDGRID_API_KEY);
+
   try {
     const result = insertContactRequestSchema.safeParse(req.body);
     
