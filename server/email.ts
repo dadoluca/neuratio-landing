@@ -1,4 +1,5 @@
 import sgMail from '@sendgrid/mail';
+import { int } from 'drizzle-orm/mysql-core';
 
 if (!process.env.SENDGRID_API_KEY) {
   console.warn("SENDGRID_API_KEY not found. Email functionality will be disabled.");
@@ -70,27 +71,27 @@ export async function sendAutoReply(data: ContactFormData): Promise<boolean> {
     const msg = {
       to: data.email,
       from: 'info@neuratio.ai',
-      subject: 'Thank you for your interest in Neuratio',
+      subject: 'Grazie per l\'interesse in Neuratio!',
       html: `
-        <h2>Thank you for contacting Neuratio!</h2>
-        <p>Dear ${data.name},</p>
-        <p>Thank you for your interest in Neuratio's AI-powered customer service platform. We have received your demo request and will get back to you within 24 hours.</p>
-        <p>In the meantime, feel free to connect with us on LinkedIn:</p>
+        <h2>Grazie per aver contattato Neuratio!</h2>
+        <p>Gentile ${data.name},</p>
+        <p>La ringraziamo per il suo interesse nella piattaforma di assistenza clienti basata su AI di Neuratio. Abbiamo ricevuto la sua richiesta di demo e la ricontatteremo entro 24 ore.</p>
+        <p>Nel frattempo, non esiti a connettersi con noi su LinkedIn:</p>
         <ul>
           <li><a href="https://www.linkedin.com/in/luca-dadone-8858a41a9/">Luca Dadone</a></li>
           <li><a href="https://www.linkedin.com/in/andrea-bioddo/">Andrea Bioddo</a></li>
         </ul>
-        <p>Best regards,<br>The Neuratio Team</p>
+        <p>Cordiali saluti,<br>Il Team Neuratio</p>
       `,
       text: `
-        Thank you for contacting Neuratio!
+        Grazie per aver contattato Neuratio!
         
-        Dear ${data.name},
+        Gentile ${data.name},
         
-        Thank you for your interest in Neuratio's AI-powered customer service platform. We have received your demo request and will get back to you within 24 hours.
+        La ringraziamo per il suo interesse nella piattaforma di assistenza clienti basata su AI di Neuratio. Abbiamo ricevuto la sua richiesta di demo e la ricontatteremo entro 24 ore.
         
-        Best regards,
-        The Neuratio Team
+        Cordiali saluti,
+        Il Team Neuratio
       `
     };
 
