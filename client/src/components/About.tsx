@@ -59,7 +59,7 @@ export default function About() {
                 href={founder.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-3 text-primary hover:text-primary/80 transition-all duration-300 font-semibold text-lg group-hover:scale-105"
+                className="inline-flex items-center space-x-3 text-primary hover:text-primary/80 transition-colors transition-transform duration-300 font-semibold text-lg group-hover:scale-105"
               >
                 <ExternalLink className="h-6 w-6" />
                 <span>{t('about.linkedin')}</span>
