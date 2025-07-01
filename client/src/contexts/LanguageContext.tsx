@@ -338,8 +338,8 @@ const translations = {
     'features.simpleRequests.subtitle': 'risposte automatiche per problemi comuni e richieste incomplete',
     'features.simpleRequests.description': 'Il sistema AI identifica e risponde automaticamente alle richieste di routine e alle richieste incomplete, ad esempio quando manca la matricola del macchinario o la descrizione del problema, fornendo risposte immediate e alleggerendo il lavoro del tuo team.',
 
-    'features.suggestions.title': 'Risposte suggerite dall’AI',
-    'features.suggestions.subtitle': 'per richieste complesse',
+    'features.suggestions.title': 'Risposte suggerite dall’AI per problematiche complesse',
+    'features.suggestions.subtitle': 'bozza di soluzione per richieste complesse',
     'features.suggestions.description': 'L\'AI analizza i manuali tecnici della macchina e i ticket simili già risolti in passato, generando bozze di soluzioni, pronte da inviare con un click.',
 
     'features.knowledgeBase.title': 'Storicizzazione Intelligente',
