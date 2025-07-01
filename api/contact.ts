@@ -4,10 +4,11 @@ import { storage } from '../server/storage';
 import { insertContactRequestSchema } from '../shared/schema';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // Aggiungi headers CORS espliciti
+  // Headers CORS più permissivi
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS, GET');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Accept, User-Agent');
+  res.setHeader('Access-Control-Allow-Credentials', 'false');
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -18,22 +19,59 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // Log più dettagliati per debug
-    console.log('Request headers:', req.headers);
-    console.log('Request body:', req.body);
+    // Log dettagliati per debug Mac vs Windows
+    console.log('--- REQUEST DEBUG ---');
+    console.log('Method:', req.method);
     console.log('User-Agent:', req.headers['user-agent']);
+    console.log('Content-Type:', req.headers['content-type']);
+    console.log('Origin:', req.headers.origin);
+    console.log('Raw body type:', typeof req.body);
+    console.log('Raw body:', req.body);
 
-    const result = insertContactRequestSchema.safeParse(req.body);
+    // Gestione body più robusta per Mac
+    let parsedBody = req.body;
+    
+    // Se il body è una stringa, prova a fare il parse
+    if (typeof req.body === 'string') {
+      try {
+        parsedBody = JSON.parse(req.body);
+      } catch (e) {
+        console.log('Body string parse failed:', e);
+        return res.status(400).json({ error: 'Invalid JSON format' });
+      }
+    }
+
+    // Validazione con logging dettagliato
+    const result = insertContactRequestSchema.safeParse(parsedBody);
     if (!result.success) {
-      console.error('Validation error:', result.error.errors);
-      return res.status(400).json({ error: 'Invalid data', details: result.error.errors });
+      console.error('Validation error details:', JSON.stringify(result.error.errors, null, 2));
+      return res.status(400).json({ 
+        error: 'Invalid data', 
+        details: result.error.errors,
+        receivedData: parsedBody 
+      });
     }
 
     const { name, company, email, message } = result.data;
+    console.log('Parsed data success:', { name, company, email, hasMessage: !!message });
 
-    // Send emails con gestione errori migliorata
-    const emailSent = await sendContactEmail({ name, company, email, message: message ?? undefined });
-    const autoReplySent = await sendAutoReply({ name, company, email, message: message ?? undefined });
+    // Send emails con timeout e retry
+    const emailPromises = [
+      sendContactEmail({ name, company, email, message: message ?? undefined }),
+      sendAutoReply({ name, company, email, message: message ?? undefined })
+    ];
+
+    const [emailSent, autoReplySent] = await Promise.allSettled(emailPromises);
+    
+    const emailResult = emailSent.status === 'fulfilled' ? emailSent.value : false;
+    const autoReplyResult = autoReplySent.status === 'fulfilled' ? autoReplySent.value : false;
+
+    if (emailSent.status === 'rejected') {
+      console.error('Email send failed:', emailSent.reason);
+    }
+    if (autoReplySent.status === 'rejected') {
+      console.error('Auto-reply send failed:', autoReplySent.reason);
+    }
 
     // Store contact request
     const contactRequest = await storage.createContactRequest({
@@ -42,26 +80,33 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       email,
       message: message || null,
       timestamp: new Date(),
-      emailSent,
-      autoReplySent
+      emailSent: emailResult,
+      autoReplySent: autoReplyResult
     });
 
-    console.log('New contact request:', contactRequest);
+    console.log('Contact saved successfully:', contactRequest.id);
 
     return res.status(200).json({
       success: true,
-      message: emailSent ? 'Contact request sent successfully' : 'Contact request saved (email disabled)',
-      emailSent,
-      autoReplySent
+      message: emailResult ? 'Contact request sent successfully' : 'Contact request saved (email disabled)',
+      emailSent: emailResult,
+      autoReplySent: autoReplyResult,
+      debug: {
+        userAgent: req.headers['user-agent'],
+        contentType: req.headers['content-type']
+      }
     });
 
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error('--- CONTACT FORM ERROR ---');
+    console.error('Error:', error);
     console.error('Error stack:', error instanceof Error ? error.stack : 'No stack available');
+    console.error('Error message:', error instanceof Error ? error.message : 'No message');
     
     return res.status(500).json({ 
       error: 'Internal server error',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? (error instanceof Error ? error.message : 'Unknown error') : undefined,
+      timestamp: new Date().toISOString()
     });
   }
 }
