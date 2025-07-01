@@ -37,7 +37,7 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {founders.map((founder, index) => (
-            <div key={index} className="card-gradient professional-glow p-10 rounded-3xl text-center hover:shadow-2xl transition-all duration-500 transform    group">
+            <div key={index} className="card-gradient professional-glow p-10 rounded-3xl text-center hover:shadow-2xl transition-all duration-500 transform group">
               <div className="relative mb-8">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary/60 transition-all duration-300">
                   <img
