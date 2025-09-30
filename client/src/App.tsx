@@ -7,6 +7,7 @@ import { queryClient } from "./lib/queryClient";
 import Home from "@/pages/Home";
 import ProblemiSoluzioni from "@/pages/ProblemiSoluzioni";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import CookiePolicy from "@/pages/CookiePolicy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/problemi-soluzioni" component={ProblemiSoluzioni} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/cookie-policy" component={CookiePolicy} />
       <Route component={NotFound} />
     </Switch>
   );

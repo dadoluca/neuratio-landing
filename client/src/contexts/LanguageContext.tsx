@@ -244,6 +244,39 @@ const translations = {
     'privacyPolicy.contactEmail': 'Email: privacy@neuratio.ai',
     'privacyPolicy.contactAddress': 'Address: Piazza Beppe Manfredi 9, 12045 Fossano (CN), Italia',
     'privacyPolicy.contactVAT': 'VAT: 04170290045',
+  
+    "cookiePolicy.title": "Cookie Policy",
+    "cookiePolicy.subtitle": "How we use Cookies and other Tracking Tools",
+    "cookiePolicy.lastUpdated": "Last updated: September 30, 2025",
+
+    "cookiePolicy.section1Title": "Introduction",
+    "cookiePolicy.section1Content": "This document describes the technologies (“Tracking Tools”) used by neuratio.ai. These tools allow the Controller to collect and store information (e.g., through Cookies) or use resources (e.g., scripts) on the User’s device when interacting with the Application. Some purposes may require the User’s consent, which can be withdrawn at any time.",
+
+    "cookiePolicy.section2Title": "Tracking Tools Used",
+    "cookiePolicy.section2Content": "This Application only uses third-party Tracking Tools, specifically Google Fonts.",
+    "cookiePolicy.section2TableHeader": "Details of cookies used",
+    "cookiePolicy.section2Table": "Name: Google Fonts | Provider: Google LLC | Purpose: Font display | Duration: Session | Type: Third-party technical",
+
+    "cookiePolicy.section3Title": "Purpose and Functioning",
+    "cookiePolicy.section3Content": "Technical Cookies or similar tools are used to ensure the Application functions properly. Google Fonts enables the display of font styles provided by Google LLC.",
+
+    "cookiePolicy.section4Title": "Managing Consent",
+    "cookiePolicy.section4Content": "Where the use of Tracking Tools is based on consent, the User may grant or revoke consent at any time via the privacy preferences panel or by contacting the third party directly.",
+
+    "cookiePolicy.section5Title": "Managing via Device Settings",
+    "cookiePolicy.section5Content": "Users can manage Cookies and similar technologies through browser settings (view, block, or delete). Instructions are available for major browsers: Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge, Brave, Opera. For mobile apps, tracking can be disabled through the device’s advertising or privacy settings.",
+
+    "cookiePolicy.section6Title": "Consequences of Refusal",
+    "cookiePolicy.section6Content": "Users may decide whether to allow the use of Tracking Tools. However, blocking them may reduce functionality and the quality of the service provided.",
+
+    "cookiePolicy.section7Title": "Data Controller",
+    "cookiePolicy.section7Content": "Neuratio S.r.l., Piazza Beppe Manfredi 9, 12045 Fossano (CN), Italy. Email: privacy@neuratio.ai",
+
+    "cookiePolicy.section8Title": "Definitions",
+    "cookiePolicy.section8Content": "Personal Data: information identifying a natural person. Usage Data: information collected automatically (IP, technical logs). User: the individual using the Application. Data Subject: the natural person to whom the Data refers. Processor: entity processing data on behalf of the Controller. Controller: entity determining purposes and means of processing. Cookie: small files stored in the User’s browser. Tracking Tool: technologies enabling user tracking.",
+
+    "cookiePolicy.section9Title": "Changes to the Cookie Policy",
+    "cookiePolicy.section9Content": "The Controller may update this Cookie Policy at any time. Changes will be announced on this page and, if possible, through a site notification."
   },
   
   it: {
@@ -481,6 +514,38 @@ const translations = {
     'privacyPolicy.contactEmail': 'Email: privacy@neuratio.ai',
     'privacyPolicy.contactAddress': 'Sede: Piazza Beppe Manfredi 9, 12045 Fossano (CN), Italia',
     'privacyPolicy.contactVAT': 'P.IVA 04170290045',
+   "cookiePolicy.title": "Cookie Policy",
+    "cookiePolicy.subtitle": "Come utilizziamo Cookie e altri Strumenti di Tracciamento",
+    "cookiePolicy.lastUpdated": "Ultimo aggiornamento: 30 settembre 2025",
+
+    "cookiePolicy.section1Title": "Introduzione",
+    "cookiePolicy.section1Content": "Questo documento descrive le tecnologie (\"Strumenti di Tracciamento\") utilizzate da neuratio.ai. Tali strumenti consentono al Titolare di raccogliere e salvare informazioni (ad esempio tramite Cookie) o di utilizzare risorse (ad esempio script) sul dispositivo dell’Utente quando interagisce con l’Applicazione. Alcune finalità possono richiedere il consenso dell’Utente, che può essere revocato in qualsiasi momento.",
+
+    "cookiePolicy.section2Title": "Strumenti di Tracciamento Utilizzati",
+    "cookiePolicy.section2Content": "Questa Applicazione utilizza esclusivamente Strumenti di Tracciamento di terze parti, limitatamente al servizio Google Fonts.",
+    "cookiePolicy.section2TableHeader": "Dettaglio dei Cookie utilizzati",
+    "cookiePolicy.section2Table": "Nome: Google Fonts | Fornitore: Google LLC | Finalità: Visualizzazione font | Durata: Sessione | Tipologia: Tecnico di terza parte",
+
+    "cookiePolicy.section3Title": "Finalità e Funzionamento",
+    "cookiePolicy.section3Content": "I Cookie tecnici o altri strumenti analoghi sono utilizzati per garantire il funzionamento dell’Applicazione e la corretta erogazione del Servizio. Google Fonts consente la visualizzazione di stili di carattere gestiti da Google LLC.",
+
+    "cookiePolicy.section4Title": "Gestione del Consenso",
+    "cookiePolicy.section4Content": "Quando l’utilizzo di Strumenti di Tracciamento si basa sul consenso, l’Utente può fornire o revocare il consenso in qualsiasi momento tramite il pannello privacy o contattando direttamente la terza parte.",
+
+    "cookiePolicy.section5Title": "Gestione tramite Dispositivo",
+    "cookiePolicy.section5Content": "Gli Utenti possono gestire Cookie e tecnologie simili tramite le impostazioni del browser (visualizzare, bloccare o cancellare). Informazioni utili sono disponibili per i principali browser: Google Chrome, Mozilla Firefox, Apple Safari, Microsoft Edge, Brave, Opera. Per applicazioni mobili, è possibile disattivare il tracciamento tramite le impostazioni del dispositivo.",
+
+    "cookiePolicy.section6Title": "Conseguenze del Rifiuto",
+    "cookiePolicy.section6Content": "Gli Utenti possono scegliere se permettere o meno l’utilizzo di Strumenti di Tracciamento. Tuttavia, il blocco può ridurre funzionalità e qualità del servizio.",
+
+    "cookiePolicy.section7Title": "Titolare del Trattamento",
+    "cookiePolicy.section7Content": "Neuratio S.r.l., Piazza Beppe Manfredi 9, 12045 Fossano (CN), Italia. Email: privacy@neuratio.ai",
+
+    "cookiePolicy.section8Title": "Definizioni",
+    "cookiePolicy.section8Content": "Dati Personali: informazioni che identificano una persona fisica. Dati di Utilizzo: informazioni raccolte automaticamente (IP, log tecnici). Utente: l’individuo che utilizza l’Applicazione. Interessato: la persona fisica cui si riferiscono i Dati. Responsabile: chi tratta dati per conto del Titolare. Titolare: chi determina finalità e mezzi del trattamento. Cookie: file salvati nel browser. Strumento di Tracciamento: tecnologie che consentono di tracciare gli Utenti.",
+
+    "cookiePolicy.section9Title": "Modifiche alla Cookie Policy",
+    "cookiePolicy.section9Content": "Il Titolare può modificare la presente Cookie Policy in qualsiasi momento. Le modifiche saranno comunicate su questa pagina e, se possibile, tramite notifica sul sito."
   }
 };
 

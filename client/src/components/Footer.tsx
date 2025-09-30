@@ -70,6 +70,14 @@ export default function Footer() {
                   </span>
                 </Link>
               </li>
+              <li>
+                <Link to="/cookie-policy">
+                  <span className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg relative group cursor-pointer">
+                    {t('cookiePolicy.title')}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
           
