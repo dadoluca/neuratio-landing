@@ -68,7 +68,8 @@ export default function Hero() {
               {t('hero.title')}{" "}
               <span className="text-primary">
                 {t('hero.titleHighlight')}
-              </span>
+              </span>{" "}
+              {t('hero.titleSuffix')}
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-2">
               {t('hero.subtitle')}

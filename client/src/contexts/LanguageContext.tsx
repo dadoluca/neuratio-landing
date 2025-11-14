@@ -20,7 +20,8 @@ const translations = {
     // Hero Section
     'hero.title': 'Revolutionizing Customer Service for',
     'hero.titleHighlight': 'Machinery Manufacturers',
-    'hero.subtitle': 'Resolve requests in seconds with an AI assistant that knows every detail about your machinery.',
+    'hero.titleSuffix': 'with Artificial Intelligence',
+    'hero.subtitle': 'AI-powered ticketing platform that knows your machines, intercepts customer requests, and suggests what to respond.',
     'hero.bookDemo': 'Book a Demo!',
     'hero.learnMore': 'Learn More',
     'hero.flowTitle': 'How Neuratio Works',
@@ -300,9 +301,10 @@ const translations = {
     'nav.problemsSolutions': 'Problemi e Soluzioni',
     
     // Hero Section
-    'hero.title': 'Rivoluzioniamo il Servizio Clienti per i',
+    'hero.title': 'Rivoluzioniamo il Servizio Clienti dei',
     'hero.titleHighlight': 'Produttori di Macchinari',
-    'hero.subtitle': 'Risolvi le richieste in pochi secondi grazie a un assistente AI che conosce ogni dettaglio dei tuoi macchinari.',
+    'hero.titleSuffix': 'con l\'Intelligenza Artificiale',
+    'hero.subtitle': 'Piattaforma di ticketing AI che conosce le tue macchine, intercetta le richieste dei clienti e ti suggerisce cosa rispondere.',
     'hero.bookDemo': 'Prenota una demo!',
     'hero.learnMore': 'Scopri di Più',
     'hero.flowTitle': 'Come Funziona Neuratio',
