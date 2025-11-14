@@ -1,6 +1,7 @@
-import { ExternalLink, Bot } from "lucide-react";
+import { ExternalLink, Bot, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import neuratoLogoHorizontal from "@assets/NEURATIOLOGOacqua.svg";
+import i3pLogo from "@/assets/i3P-logo-bianco.svg";
 import { Link } from "wouter"; // Changed from "react-router-dom" to "wouter"
 
 export default function Footer() {
@@ -21,15 +22,28 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center mb-6">
-              <img 
-                src={neuratoLogoHorizontal} 
-                alt="Neuratio Logo" 
+              <img
+                src={neuratoLogoHorizontal}
+                alt="Neuratio Logo"
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-muted-foreground leading-relaxed text-lg">
+            <p className="text-muted-foreground leading-relaxed text-lg mb-6">
               {t('footer.description')}
             </p>
+
+            {/* I3P Incubator Logo */}
+            <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg border border-border/50">
+              <img
+                src={i3pLogo}
+                alt="I3P - Incubatore Politecnico di Torino"
+                className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <div className="text-xs text-muted-foreground">
+                <p className="font-semibold">Incubati presso</p>
+                <p>I3P Politecnico di Torino</p>
+              </div>
+            </div>
           </div>
           
           <div>
@@ -83,30 +97,46 @@ export default function Footer() {
           
           <div>
             <h4 className="text-xl font-bold text-foreground mb-6">{t('footer.connect')}</h4>
-            <div className="flex space-x-6">
+
+            {/* Company LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/neuratioai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0A66C2] text-white rounded-lg hover:bg-[#004182] transition-all duration-300 transform hover:scale-105"
+            >
+              <Linkedin className="h-5 w-5" />
+              <span className="font-semibold">Seguici su LinkedIn</span>
+            </a>
+
+            <h5 className="text-sm font-semibold text-foreground mb-3 mt-6">Team</h5>
+            <div className="flex space-x-6 mb-6">
               <a
                 href="https://www.linkedin.com/in/luca-dadone-8858a41a9/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
-              >Luca
+              >
                 <ExternalLink className="h-8 w-8" />
+                <span className="sr-only">Luca</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/andrea-bioddo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
-              >Andrea<ExternalLink className="h-8 w-8" />
-              </a>              
-            </div>
-            <br />
-            <a
-                href="mailto:info@neuratio.ai"
-                className="text-muted-foreground hover:text-primary transition-all duration-300 transform hover:scale-110"
               >
-                info@neuratio.ai
+                <ExternalLink className="h-8 w-8" />
+                <span className="sr-only">Andrea</span>
               </a>
+            </div>
+
+            <a
+              href="mailto:info@neuratio.ai"
+              className="text-muted-foreground hover:text-primary transition-all duration-300 inline-block"
+            >
+              info@neuratio.ai
+            </a>
           </div>
         </div>
         
