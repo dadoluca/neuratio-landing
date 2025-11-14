@@ -30,21 +30,22 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-gradient py-32 lg:py-40 relative overflow-hidden">
+    <section id="home" className="hero-gradient py-20 sm:py-28 lg:py-40 relative overflow-hidden">
       <ParticlesBackground />
       <div className="ai-grid absolute inset-0 opacity-20"></div>
 
       {/* Professional Loading Animation */}
       {showAnimation && (
-        <div className="fixed inset-0 z-50 bg-background flex items-center justify-center">
-          <div className="relative flex items-center justify-center">
+        <div className="fixed inset-0 z-50 bg-background flex items-center justify-center overflow-hidden">
+          <ParticlesBackground />
+          <div className="relative z-10 flex items-center justify-center">
             {/* Clean Spinning Circle */}
             <div className="w-32 h-32 rounded-full custom-spinner"></div>
             {/* Logo in Center */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <img 
-                src={neuratoLogoVertical} 
-                alt="Neuratio Logo" 
+              <img
+                src={neuratoLogoVertical}
+                alt="Neuratio Logo"
                 className="h-16 w-auto"
               />
             </div>
@@ -63,39 +64,39 @@ export default function Hero() {
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-all duration-1000 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center max-w-5xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-none mb-8">
+            <h1 className="mb-6 sm:mb-8">
               {t('hero.title')}{" "}
-              <span className="wave-text">
+              <span className="text-primary">
                 {t('hero.titleHighlight')}
               </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 space-y-8">
+            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12 px-2">
               {t('hero.subtitle')}
             </p>
             <div className="flex justify-center items-center">
               <Button
                 onClick={() => scrollToSection("contact")}
                 size="lg"
-                className="glow-button animate-breath text-primary-foreground px-12 py-6 text-xl font-bold rounded-2xl transform transition-all duration-300 hover:scale-105"
+                className="glow-button animate-breath text-primary-foreground px-8 sm:px-12 py-4 sm:py-6 text-lg sm:text-xl font-bold rounded-2xl transform transition-all duration-300 hover:scale-105"
               >
-                
+
                 {t('hero.bookDemo')}
               </Button>
             </div>
           </div>
-          
+
           {/* Application Flow Visualization */}
-          <div className="mt-20 animate-slide-up">
+          <div className="mt-12 sm:mt-16 lg:mt-20 animate-slide-up">
             <div className="relative">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="mb-3 sm:mb-4">
                   {t('hero.flowTitle')}
                 </h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base sm:text-lg text-muted-foreground px-4">
                   {t('hero.flowSubtitle')}
                 </p>
               </div>
-              <div className="flex justify-center ">
+              <div className="flex justify-center px-2">
                 <FlowDiagram />
               </div>
             </div>

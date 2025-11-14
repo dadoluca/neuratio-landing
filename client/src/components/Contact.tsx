@@ -83,13 +83,13 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32" style={{ backgroundColor: '#ffffff' }}>
+    <section id="contact" className="py-16 sm:py-24 lg:py-32" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-gray-900 mb-6 sm:mb-8">
             {t('contact.title')}
           </h2>
-          <p className="text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-4">
             {t('contact.subtitle')}
           </p>
         </div>
@@ -189,45 +189,6 @@ export default function Contact() {
                   </li>
                 ))}
               </ul>
-            </div>
-            
-            {/* Demo Simulation */}
-            <div className="rounded-2xl p-8 border border-gray-200">
-              <h4 className="text-xl font-bold text-primary mb-6">Come Funziona Neuratio</h4>
-              <div className="space-y-4">
-                <div className="bg-primary/10 rounded-xl p-4 border-l-4 border-primary">
-                  <p className="text-sm text-gray-600">Richiesta Cliente</p>
-                  <p className="text-gray-900 font-medium">"Errore macchina codice E-4429, serve aiuto immediato"</p>
-                </div>
-                <div className="bg-primary/20 rounded-xl p-4 border-l-4 border-primary animate-pulse">
-                  <p className="text-sm text-gray-600">Risposta AI (2.3s)</p>
-                  <p className="text-gray-900 font-medium">"Errore E-4429 indica problema pressione idraulica. Invio guida risoluzione e programmo tecnico."</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-16 pt-8 border-t border-gray-200">
-          <div className="text-center">
-            <p className="text-gray-700 mb-6 text-lg">{t('contact.connectDirect')}</p>
-            <div className="flex justify-center space-x-8">
-              <a
-                href="https://www.linkedin.com/in/luca-dadone-8858a41a9/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-all duration-300 transform hover:scale-110"
-              >Luca
-                <ExternalLink className="h-8 w-8" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/andrea-bioddo/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-all duration-300 transform hover:scale-110"
-              >Andrea
-                <ExternalLink className="h-8 w-8" />
-              </a>
             </div>
           </div>
         </div>

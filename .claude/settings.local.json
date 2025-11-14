@@ -4,7 +4,8 @@
       "Bash(move \"attached_assets\\i3P logo bianco.svg\" \"client\\src\\assets\\i3P-logo-bianco.svg\")",
       "Bash(mv:*)",
       "Bash(mkdir:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []

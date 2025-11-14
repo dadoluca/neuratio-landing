@@ -7,6 +7,7 @@ import neuratoLogoHorizontal from "@assets/NEURATIOLOGOacqua.svg";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
@@ -22,59 +23,66 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-background/95 backdrop-blur-xl sticky top-0 z-50 border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <img 
-              src={neuratoLogoHorizontal} 
-              alt="Neuratio Logo" 
-              className="h-8 w-auto"
+    <nav className="bg-background/98 backdrop-blur-xl sticky top-0 z-50 border-b border-border/40 shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="flex justify-between items-center h-16 lg:h-18">
+          <div className="flex items-center relative">
+            {!logoLoaded && (
+              <div className="h-8 lg:h-10 w-32 lg:w-40 bg-muted/30 animate-pulse rounded-md" />
+            )}
+            <img
+              src={neuratoLogoHorizontal}
+              alt="Neuratio Logo"
+              className={`h-8 lg:h-10 w-auto cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110 ${
+                logoLoaded ? 'opacity-100' : 'opacity-0 absolute'
+              }`}
+              onClick={() => scrollToSection("home")}
+              onLoad={() => setLogoLoaded(true)}
             />
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              <button 
+            <div className="flex items-center space-x-2 lg:space-x-3">
+              <button
                 onClick={() => scrollToSection("home")}
-                className="text-muted-foreground hover:text-primary transition-all duration-300 relative group"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.home')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300"></span>
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("about")}
-                className="text-muted-foreground hover:text-primary transition-all duration-300 relative group"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.about')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300"></span>
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="text-muted-foreground hover:text-primary transition-all duration-300 relative group"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.contact')}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300"></span>
               </button>
               <Link href="/problemi-soluzioni">
-                <span className="text-muted-foreground hover:text-primary transition-all duration-300 relative group cursor-pointer">
+                <span className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200 cursor-pointer inline-block">
                   {t('nav.problemsSolutions')}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-transparent group-hover:w-full transition-all duration-300"></span>
                 </span>
               </Link>
+
+              <div className="h-6 w-px bg-border/60 mx-2"></div>
+
               <Button
                 onClick={toggleLanguage}
                 variant="ghost"
                 size="sm"
-                className="text-muted-foreground hover:text-primary transition-all duration-300"
+                className="text-muted-foreground hover:text-foreground hover:bg-muted/60 font-medium px-3 py-2 text-sm"
               >
-                <Globe className="h-4 w-4 mr-2" />
+                <Globe className="h-4 w-4 mr-1.5" />
                 {language.toUpperCase()}
               </Button>
-              <Button 
+
+              <Button
                 onClick={() => scrollToSection("contact")}
-                className="glow-button text-primary-foreground px-6 py-2 rounded-xl font-semibold"
+                className="glow-button text-primary-foreground px-5 py-2 rounded-lg font-semibold text-sm ml-2 shadow-md hover:shadow-xl transition-all duration-300"
               >
                 {t('nav.bookDemo')}
               </Button>
@@ -87,7 +95,7 @@ export default function Navigation() {
               onClick={toggleLanguage}
               variant="ghost"
               size="sm"
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-primary p-2"
             >
               <Globe className="h-4 w-4" />
             </Button>
@@ -95,46 +103,48 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-muted-foreground hover:text-primary"
+              className="text-muted-foreground hover:text-primary p-2"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
-              <button 
+          <div className="md:hidden py-4 border-t border-border/50 bg-background/95">
+            <div className="flex flex-col space-y-2">
+              <button
                 onClick={() => scrollToSection("home")}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.home')}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("about")}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.about')}
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left"
+                className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200"
               >
                 {t('nav.contact')}
               </button>
               <Link href="/problemi-soluzioni">
-                <button className="text-muted-foreground hover:text-primary transition-colors duration-200 text-left w-full">
+                <button className="text-left px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 rounded-lg transition-all duration-200 w-full">
                   {t('nav.problemsSolutions')}
                 </button>
               </Link>
-              <Button 
-                onClick={() => scrollToSection("contact")}
-                className="glow-button text-primary-foreground rounded-xl font-semibold w-full"
-              >
-                {t('nav.bookDemo')}
-              </Button>
+              <div className="pt-2">
+                <Button
+                  onClick={() => scrollToSection("contact")}
+                  className="glow-button text-primary-foreground rounded-lg font-semibold w-full shadow-md py-3 text-sm"
+                >
+                  {t('nav.bookDemo')}
+                </Button>
+              </div>
             </div>
           </div>
         )}

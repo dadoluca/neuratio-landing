@@ -58,11 +58,11 @@ function StatCounter({ end, suffix, label, prefix = "" }: StatProps) {
   return (
     <div ref={ref} className="text-center group">
       <div className="mb-4">
-        <span className="text-6xl lg:text-7xl xl:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary group-hover:scale-110 transition-transform duration-300 inline-block">
+        <span className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary group-hover:scale-110 transition-transform duration-300 inline-block">
           {prefix}{count}{suffix}
         </span>
       </div>
-      <p className="text-lg lg:text-xl text-muted-foreground font-semibold">
+      <p className="text-base lg:text-lg text-muted-foreground font-semibold">
         {label}
       </p>
     </div>
@@ -74,29 +74,24 @@ export default function Stats() {
 
   const stats = [
     { end: 65, suffix: "%", label: t('stats.reduction'), prefix: "" },
-    { end: 2, suffix: "s", label: t('stats.responseTime'), prefix: "<" },
+    { end: 2, suffix: "min", label: t('stats.responseTime'), prefix: "<" },
     { end: 24, suffix: "/7", label: t('stats.availability'), prefix: "" },
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-16 sm:py-20 lg:py-24 gradient-bg relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="mb-3 sm:mb-4">
             {t('stats.title')}
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-lg sm:text-xl text-muted-foreground px-4">
             {t('stats.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
           {stats.map((stat, index) => (
             <StatCounter key={index} {...stat} />
           ))}

@@ -73,6 +73,27 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Uniforma titoli in tutta la landing */
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl font-semibold leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
 }
 
 @layer utilities {
@@ -84,7 +105,9 @@
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, var(--neuratio-light-bg) 0%, var(--neuratio-light-surface) 50%, var(--neuratio-light-bg) 100%);
+    background: linear-gradient(180deg,
+      hsl(0, 0%, 99%) 0%,
+      hsl(210, 40%, 98%) 100%);
     position: relative;
   }
 
@@ -95,21 +118,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      radial-gradient(circle at 20% 50%, var(--neuratio-secondary-transparent) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, var(--neuratio-primary-transparent) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, var(--neuratio-secondary-lighter) 0%, transparent 50%);
-    opacity: 0.8;
+    background:
+      radial-gradient(ellipse at 20% 30%, var(--neuratio-primary-transparent) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, var(--neuratio-secondary-transparent) 0%, transparent 50%);
+    opacity: 0.6;
     pointer-events: none;
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, 
-      hsl(0, 0%, 100%) 0%, 
-      hsl(0, 0%, 98%) 25%,
-      hsl(210, 40%, 98%) 50%,
-      hsl(0, 0%, 97%) 75%,
-      hsl(0, 0%, 100%) 100%);
+    background: linear-gradient(180deg,
+      hsl(0, 0%, 100%) 0%,
+      hsl(210, 40%, 99%) 100%);
     position: relative;
   }
 
@@ -120,11 +139,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      radial-gradient(ellipse at 30% 20%, var(--neuratio-primary-transparent) 0%, transparent 60%),
-      radial-gradient(ellipse at 70% 80%, var(--neuratio-secondary-transparent) 0%, transparent 60%),
-      radial-gradient(ellipse at 90% 40%, var(--neuratio-primary-light) 0%, transparent 50%);
-    opacity: 0.7;
+    background:
+      radial-gradient(ellipse at 30% 20%, var(--neuratio-primary-transparent) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 80%, var(--neuratio-secondary-transparent) 0%, transparent 50%);
+    opacity: 0.5;
     pointer-events: none;
   }
 

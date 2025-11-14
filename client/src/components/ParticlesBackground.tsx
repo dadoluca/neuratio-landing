@@ -56,7 +56,7 @@ export default function ParticlesBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(37, 229, 224, 0.6)"; // primary color
+        ctx.fillStyle = "#009595"; // secondary color più scuro e visibile
         ctx.fill();
 
         // Draw connections
@@ -69,9 +69,9 @@ export default function ParticlesBackground() {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            const opacity = (1 - distance / connectionDistance) * 0.3;
-            ctx.strokeStyle = `rgba(37, 229, 224, ${opacity})`;
-            ctx.lineWidth = 1;
+            const opacity = (1 - distance / connectionDistance) * 0.5;
+            ctx.strokeStyle = `rgba(5, 169, 240, ${opacity})`; // secondary color più visibile
+            ctx.lineWidth = 1.5;
             ctx.stroke();
           }
         });
@@ -90,7 +90,7 @@ export default function ParticlesBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full opacity-40"
+      className="absolute inset-0 w-full h-full opacity-60"
       style={{ pointerEvents: "none" }}
     />
   );

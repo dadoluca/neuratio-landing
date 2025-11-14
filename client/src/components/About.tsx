@@ -24,13 +24,13 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 gradient-bg">
+    <section id="about" className="py-16 sm:py-24 lg:py-32 gradient-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="mb-6 sm:mb-8">
             {t('about.title')}
           </h2>
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
             {t('about.subtitle')}
           </p>
         </div>
