@@ -32,16 +32,27 @@ export default function Footer() {
               {t('footer.description')}
             </p>
 
-            {/* I3P Incubator Logo */}
-            <div className="flex items-center gap-3 p-4 bg-muted/30 rounded-lg border border-border/50">
-              <img
-                src={i3pLogo}
-                alt="I3P - Incubatore Politecnico di Torino"
-                className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <div className="text-xs text-muted-foreground">
-                <p className="font-semibold">Incubati presso</p>
-                <p>I3P Politecnico di Torino</p>
+            {/* I3P Incubator Logo - Enhanced */}
+            <div className="mt-8 p-5 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 bg-white p-2 rounded-lg">
+                  <img
+                    src={i3pLogo}
+                    alt="I3P - Incubatore Politecnico di Torino"
+                    className="h-12 w-auto"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-primary uppercase tracking-wide mb-1">
+                    Startup Incubata
+                  </p>
+                  <p className="text-sm font-semibold text-foreground">
+                    I3P - Politecnico di Torino
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Incubatore certificato dal 2000
+                  </p>
+                </div>
               </div>
             </div>
           </div>

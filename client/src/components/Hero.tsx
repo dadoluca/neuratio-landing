@@ -4,6 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import FlowDiagram from "./FlowDiagram";
+import ParticlesBackground from "./ParticlesBackground";
 import styles from "./Hero.module.css";
 import neuratoLogoVertical from "@assets/NEURATIOLOGOVERTICALE.svg";
 
@@ -30,8 +31,9 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-gradient py-32 lg:py-40 relative overflow-hidden">
+      <ParticlesBackground />
       <div className="ai-grid absolute inset-0 opacity-20"></div>
-      
+
       {/* Professional Loading Animation */}
       {showAnimation && (
         <div className="fixed inset-0 z-50 bg-background flex items-center justify-center">
@@ -61,13 +63,13 @@ export default function Hero() {
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 transition-all duration-1000 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="text-center max-w-5xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-none mb-8">
               {t('hero.title')}{" "}
               <span className="wave-text">
                 {t('hero.titleHighlight')}
               </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12">
+            <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 space-y-8">
               {t('hero.subtitle')}
             </p>
             <div className="flex justify-center items-center">

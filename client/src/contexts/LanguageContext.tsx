@@ -90,6 +90,18 @@ const translations = {
     'contact.benefit4': 'Centralize and scale expert knowledge',
     'contact.connectDirect': 'Or connect with us directly:',
     
+    // Client Logos Section
+    'clients.trusted': 'Trusted by',
+    'clients.title': 'Leading Companies Choose Neuratio',
+    'clients.subtitle': 'We reduce response times by 65% for manufacturing companies',
+
+    // Stats Section
+    'stats.title': 'Results That Matter',
+    'stats.subtitle': 'Real numbers from real implementations',
+    'stats.reduction': 'Response Time Reduction',
+    'stats.responseTime': 'Average Response Time',
+    'stats.availability': 'Always Available',
+
     // Footer
     'footer.description': 'Revolutionizing customer service for machinery manufacturers with AI-powered solutions.',
     'footer.quickLinks': 'Quick Links',
@@ -360,6 +372,18 @@ const translations = {
     'contact.benefit4': 'Centralizzare e scalare la conoscenza degli esperti',
     'contact.connectDirect': 'O connettiti direttamente con noi:',
     
+    // Client Logos Section
+    'clients.trusted': 'Si fidano di noi',
+    'clients.title': 'Aziende Leader Scelgono Neuratio',
+    'clients.subtitle': 'Riduciamo i tempi di risposta del 65% per le aziende manifatturiere',
+
+    // Stats Section
+    'stats.title': 'Risultati Concreti',
+    'stats.subtitle': 'Numeri reali da implementazioni reali',
+    'stats.reduction': 'Riduzione Tempi di Risposta',
+    'stats.responseTime': 'Tempo Medio di Risposta',
+    'stats.availability': 'Sempre Disponibile',
+
     // Footer
     'footer.description': 'Rivoluzioniamo il servizio clienti per i produttori di macchinari con soluzioni basate su AI.',
     'footer.quickLinks': 'Link Rapidi',

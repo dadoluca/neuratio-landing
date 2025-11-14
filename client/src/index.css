@@ -138,11 +138,31 @@
     background: linear-gradient(135deg, var(--neuratio-primary) 0%, var(--neuratio-secondary) 100%);
     box-shadow: 0 4px 14px 0 rgba(28, 213, 190, 0.3);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
 
   .glow-button:hover {
     box-shadow: 0 6px 20px 0 rgba(28, 213, 190, 0.4);
     transform: translateY(-2px);
+  }
+
+  .glow-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .glow-button:active::after {
+    width: 300px;
+    height: 300px;
   }
 
   .animate-fade-in {
