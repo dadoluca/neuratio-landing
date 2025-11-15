@@ -56,7 +56,7 @@ export default function ParticlesBackground() {
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "#009595"; // secondary color più scuro e visibile
+        ctx.fillStyle = "#00959580"; // secondary color più scuro e visibile
         ctx.fill();
 
         // Draw connections
@@ -69,7 +69,7 @@ export default function ParticlesBackground() {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            const opacity = (1 - distance / connectionDistance) * 0.5;
+            const opacity = (1 - distance / connectionDistance) * 0.3;
             ctx.strokeStyle = `rgba(5, 169, 240, ${opacity})`; // secondary color più visibile
             ctx.lineWidth = 1.5;
             ctx.stroke();
