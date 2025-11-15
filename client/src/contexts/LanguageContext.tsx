@@ -25,7 +25,6 @@ const translations = {
     'hero.bookDemo': 'Book a Demo!',
     'hero.learnMore': 'Learn More',
     'hero.flowTitle': 'How Neuratio Works',
-    'hero.flowSubtitle': 'Discover how our comprehensive AI-powered platform transforms customer inquiries into instant, accurate solutions with advanced features',
     
     // Problems Section
     'problems.title': 'The Problems Manufacturers Face Daily',
@@ -308,7 +307,6 @@ const translations = {
     'hero.bookDemo': 'Prenota una demo!',
     'hero.learnMore': 'Scopri di Più',
     'hero.flowTitle': 'Come Funziona Neuratio',
-    'hero.flowSubtitle': 'Scopri come la nostra piattaforma AI completa trasforma le richieste dei clienti in soluzioni istantanee e accurate con funzionalità avanzate',
     
     // Problems Section
     'problems.title': 'I Problemi che i Produttori Affrontano Quotidianamente',

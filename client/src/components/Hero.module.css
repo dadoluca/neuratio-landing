@@ -122,10 +122,6 @@
   margin-bottom: 1rem;
 }
 
-.flowSubtitle {
-  font-size: 1.125rem;
-  color: hsl(var(--muted-foreground));
-}
 
 .diagramContainer {
   display: flex;

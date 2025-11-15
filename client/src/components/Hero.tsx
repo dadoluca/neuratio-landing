@@ -93,9 +93,7 @@ export default function Hero() {
                 <h3 className="mb-3 sm:mb-4">
                   {t('hero.flowTitle')}
                 </h3>
-                <p className="text-base sm:text-lg text-muted-foreground px-4">
-                  {t('hero.flowSubtitle')}
-                </p>
+
               </div>
               <div className="flex justify-center px-2">
                 <FlowDiagram />
