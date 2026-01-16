@@ -40,7 +40,7 @@ export default function ClientLogos() {
             <img
               src={caffiniLogo}
               alt="Caffini Client"
-              className="h-12 sm:h-16 lg:h-20 w-auto grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+              className="h-10 sm:h-14 lg:h-16 w-auto grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
             />
           </div>
         </div>
