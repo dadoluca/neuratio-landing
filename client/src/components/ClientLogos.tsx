@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import mgLogo from "@/assets/MG_LOGO_NUOVO.png";
 import dynachemLogo from "@/assets/dynachem-logo-registered.png";
+import caffiniLogo from "@/assets/logo_caffini.jpg";
 
 export default function ClientLogos() {
   const { t } = useLanguage();
@@ -32,6 +33,13 @@ export default function ClientLogos() {
             <img
               src={dynachemLogo}
               alt="Dynachem Client"
+              className="h-12 sm:h-16 lg:h-20 w-auto grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+            />
+          </div>
+          <div className="group transition-all duration-300 transform hover:scale-110">
+            <img
+              src={caffiniLogo}
+              alt="Caffini Client"
               className="h-12 sm:h-16 lg:h-20 w-auto grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
             />
           </div>
