@@ -2,6 +2,7 @@ import { ExternalLink, Bot, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import neuratoLogoHorizontal from "@assets/NEURATIOLOGOacqua.svg";
 import i3pLogo from "@/assets/i3P-logo-bianco.svg";
+import poloIctLogo from "@/assets/Polo-ICT_Member_LOGO.png";
 import { Link } from "wouter"; // Changed from "react-router-dom" to "wouter"
 
 export default function Footer() {
@@ -33,28 +34,66 @@ export default function Footer() {
             </p>
 
             {/* I3P Incubator Logo - Enhanced */}
-            <div className="mt-8 p-5 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
-              <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 bg-white p-2 rounded-lg">
-                  <img
-                    src={i3pLogo}
-                    alt="I3P - Incubatore Politecnico di Torino"
-                    className="h-12 w-auto"
-                  />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-primary uppercase tracking-wide mb-1">
-                    Startup Incubata
-                  </p>
-                  <p className="text-sm font-semibold text-foreground">
-                    I3P - Politecnico di Torino
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Incubatore certificato dal 2000
-                  </p>
+            <a
+              href="https://www.i3p.it/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-8"
+            >
+              <div className="p-5 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 bg-white p-2 rounded-lg">
+                    <img
+                      src={i3pLogo}
+                      alt="I3P - Incubatore Politecnico di Torino"
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-primary uppercase tracking-wide mb-1">
+                      Startup Incubata
+                    </p>
+                    <p className="text-sm font-semibold text-foreground">
+                      I3P - Politecnico di Torino
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Incubatore certificato dal 2000
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
+
+            {/* Polo ICT Member Logo */}
+            <a
+              href="https://poloinnovazioneict.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-6"
+            >
+              <div className="p-5 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 transform hover:scale-105">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 bg-white p-2 rounded-lg">
+                    <img
+                      src={poloIctLogo}
+                      alt="Polo Innovazione ICT - Member"
+                      className="h-12 w-auto"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-primary uppercase tracking-wide mb-1">
+                      Member
+                    </p>
+                    <p className="text-sm font-semibold text-foreground">
+                      Polo Innovazione ICT
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Cluster per l'innovazione digitale
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
           
           <div>
