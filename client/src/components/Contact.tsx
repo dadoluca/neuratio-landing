@@ -1,79 +1,22 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { ExternalLink, CheckCircle, Send } from "lucide-react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
+import { useEffect } from "react";
+import { CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Contact() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    message: ""
-  });
 
-  const { toast } = useToast();
+  useEffect(() => {
+    // Load HubSpot Meetings script
+    const script = document.createElement('script');
+    script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  const submitContactForm = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: t('toast.success'),
-        description: t('toast.successDesc'),
-      });
-      setFormData({ name: "", company: "", email: "", message: "" });
-    },
-    onError: () => {
-      toast({
-        title: t('toast.error'),
-        description: t('toast.errorDesc'),
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.company || !formData.email) {
-      toast({
-        title: t('toast.missingFields'),
-        description: t('toast.missingFieldsDesc'),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: t('toast.invalidEmail'),
-        description: t('toast.invalidEmailDesc'),
-        variant: "destructive",
-      });
-      return;
-    }
-
-    submitContactForm.mutate(formData);
-  };
-
-  const handleInputChange = (field: keyof typeof formData) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: e.target.value
-    }));
-  };
+    return () => {
+      // Cleanup: remove script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const benefits = [
     t('contact.benefit1'),
@@ -95,78 +38,12 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
+          {/* HubSpot Booking Calendar */}
           <div className="p-10 lg:p-12 rounded-3xl border border-gray-200">
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-lg font-semibold text-gray-900">
-                  {t('contact.name')} *
-                </Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder={t('contact.namePlaceholder')}
-                  value={formData.name}
-                  onChange={handleInputChange('name')}
-                  className="input-glow h-14 text-lg"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="company" className="text-lg font-semibold text-gray-900">
-                  {t('contact.company')} *
-                </Label>
-                <Input
-                  id="company"
-                  type="text"
-                  placeholder={t('contact.companyPlaceholder')}
-                  value={formData.company}
-                  onChange={handleInputChange('company')}
-                  className="input-glow h-14 text-lg"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-lg font-semibold text-gray-900">
-                  {t('contact.email')} *
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder={t('contact.emailPlaceholder')}
-                  value={formData.email}
-                  onChange={handleInputChange('email')}
-                  className="input-glow h-14 text-lg"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message" className="text-lg font-semibold text-gray-900">
-                  {t('contact.message')}
-                </Label>
-                <Textarea
-                  id="message"
-                  placeholder={t('contact.messagePlaceholder')}
-                  value={formData.message}
-                  onChange={handleInputChange('message')}
-                  className="input-glow min-h-32 text-lg resize-none"
-                  rows={4}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                disabled={submitContactForm.isPending}
-                className="w-full glow-button text-primary-foreground h-16 text-xl font-bold rounded-2xl transform transition-all duration-300 hover:scale-105"
-              >
-                <Send className="mr-3 h-6 w-6" />
-                {submitContactForm.isPending ? t('contact.sending') : t('contact.submit')}
-              </Button>
-            </form>
+            <div
+              className="meetings-iframe-container"
+              data-src="https://meetings-eu1.hubspot.com/luca-dadone/neuratio-demo?embed=true"
+            ></div>
           </div>
 
           {/* Contact Information */}
