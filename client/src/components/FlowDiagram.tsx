@@ -17,7 +17,7 @@ export default function FlowDiagram() {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-5xl mx-auto">
       <img
         src={isMobile ? flowSvgVertical : flowSvg}
         alt="Flow diagram del processo AI Neuratio"
