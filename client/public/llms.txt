@@ -1,0 +1,27 @@
+# Neuratio
+
+> AI-powered ticketing platform for machinery manufacturers' customer service
+
+Neuratio is a B2B SaaS platform that automates after-sales support for industrial machinery companies using artificial intelligence. It analyzes technical requests, suggests intelligent responses, automatically escalates complex issues, and maintains a centralized knowledge base — enabling 24/7 multilingual support while reducing operational costs.
+
+## Company
+
+- **Legal name**: Neuratio S.r.l.
+- **VAT**: IT 04170290045
+- **Location**: Fossano (CN), Italy
+- **Founded**: June 10, 2025
+- **Incubated at**: I3P — Incubatore del Politecnico di Torino
+- **Member of**: Polo Innovazione ICT (Piedmont digital innovation cluster)
+- **Contact**: privacy@neuratio.ai
+
+## Pages
+
+- [Home](https://neuratio.ai/): Main landing page — value proposition, features, clients, founders
+- [Problems & Solutions](https://neuratio.ai/problemi-soluzioni): Pain points and AI-powered solutions
+- [Book a Demo](https://neuratio.ai/#contact): 30-minute personalized demo via HubSpot calendar
+- [Privacy Policy](https://neuratio.ai/privacy-policy): GDPR compliance
+- [Cookie Policy](https://neuratio.ai/cookie-policy): Cookie disclosure
+
+## Full documentation
+
+- [llms-full.md](https://neuratio.ai/llms-full.md): Complete site content for LLMs
