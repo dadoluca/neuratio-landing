@@ -190,8 +190,18 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-border mt-12 pt-8 text-center">
-          <p className="text-muted-foreground text-lg">
+        <div className="border-t border-border mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-center gap-8 mb-6 text-sm text-muted-foreground">
+            <div>
+              <span className="font-semibold text-foreground">Sede legale:</span>{" "}
+              Piazza Manfredi 9, Fossano (CN), Italia
+            </div>
+            <div>
+              <span className="font-semibold text-foreground">Sede operativa:</span>{" "}
+              I3P - Incubatore del Politecnico di Torino, Corso Castelfidardo 30/A, Torino · 011 090 5127
+            </div>
+          </div>
+          <p className="text-muted-foreground text-lg text-center">
             {t('footer.copyright')}
           </p>
         </div>

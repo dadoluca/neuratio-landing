@@ -9,14 +9,14 @@ export default function About() {
   const founders = [
     {
       name: "Luca Dadone",
-      role: "CEO & AI Expert",
+      role: "CEO & AI Engineer",
       location: "Fossano (CN), Italy",
       linkedIn: "https://www.linkedin.com/in/luca-dadone-8858a41a9/",
       image: lucaImage
     },
     {
       name: "Andrea Bioddo",
-      role: "CTO & AI Expert", 
+      role: "CTO & AI Engineer", 
       location: "Fossano (CN), Italy",
       linkedIn: "https://www.linkedin.com/in/andrea-bioddo/",
       image: andreaImage
